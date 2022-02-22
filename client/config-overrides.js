@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 const {
   addWebpackAlias,
   override
@@ -21,5 +22,6 @@ module.exports = override(
     "@API": resolve("src/API"),
     "@Hook": resolve("src/Hook"),
     "@src": resolve("./"),
+    "@asset": resolve("src/assets"),
   })
 );
