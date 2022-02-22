@@ -15,6 +15,9 @@ const GlobalStyle = createGlobalStyle`
   *::-webkit-scrollbar {
     display: none; /* Chrome, Safari, Opera*/
   }
+  body{
+    font-size:1rem;
+  }
   button {
     &:hover{
       cursor:pointer;
