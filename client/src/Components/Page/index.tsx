@@ -1,16 +1,8 @@
-import { useReducer } from "react";
-import { templateIdxReducer } from "@Hook/.";
-import AboutMeTemplate from "@Templates/AboutMe";
-import CareerTemplate from "@Templates/Career";
+import React from "react";
+import { Container } from "./style";
 
-const MainPage = () => {
-  const [templateIdxState] = useReducer(templateIdxReducer, 0);
-  return (
-    <>
-      <AboutMeTemplate index={templateIdxState} />
-      <CareerTemplate index={templateIdxState} />
-    </>
-  );
+const MainPage = ({ children }: { children: React.ReactNode }) => {
+  return <Container>{children}</Container>;
 };
 
 export default MainPage;
