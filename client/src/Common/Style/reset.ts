@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
+import { DefaultFontFamily, HoverPoitner } from ".";
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
@@ -15,13 +16,16 @@ const GlobalStyle = createGlobalStyle`
   *::-webkit-scrollbar {
     display: none; /* Chrome, Safari, Opera*/
   }
+  p{
+    line-height: 1.15;
+  }
   body{
     font-size:1rem;
+    font-family: ${DefaultFontFamily};
   }
-  button {
-    &:hover{
-      cursor:pointer;
-    }
+  button,svg {
+    ${HoverPoitner}
   }
+
 `;
 export default GlobalStyle;
