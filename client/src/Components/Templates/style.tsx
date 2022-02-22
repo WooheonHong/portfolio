@@ -5,6 +5,5 @@ interface Props {
 }
 export const Container = styled.div<Props>`
   width: 100vw;
-  height : 100vh;
-  z-index 
+  height: 100vh;
 `;
