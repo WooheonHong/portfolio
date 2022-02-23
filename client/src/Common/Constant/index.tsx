@@ -34,7 +34,7 @@ export const PAGE_INFO: PAGES_INFO_TYPE = {
     fontColor: DefaultWhiteColor,
     backgroundColor: DefaultBlackColor,
   },
-  Experience: {
+  Exprience: {
     fontColor: DefaultBlackColor,
     backgroundColor: DefaultWhiteColor,
   },
@@ -90,3 +90,11 @@ export const PROJECT_INFOS: ProjectInfoType[] = [
     info: "PubMed 논문의 entity를 추출하고 이들의 관계를 시각화 한 프로젝트입니다. \n 의료 종사자에게 도움이 되기 위해서 진행했습니다. \n 저는 다음 두 가지 기술을 구현했습니다. \n\n    1. Named Entity Normalization (NEN)entity 쌍의 관계 네트워크를 생성하는 알고리즘 구현(한 문장, 여러 문장, 문헌 단위)\n 2. 2 hop 까지 고려할 수 있는 Swanson ABC model을 사용해서 표현력 향상",
   },
 ];
+
+export const EXPRIENCE_INFOS = {
+  title: "고객프로파일링을 위한 가전 로그 데이터 분석",
+  date: "2020. 01. 13 ~ 2020. 02. 27",
+  organization: "LG Electronics Intern",
+  subtitle: ["고객프로파일링 ideation 및 EDA 로직 설계", " 기기의 패턴을 파악"],
+  detail: ["PySpark로 파싱과 필터링을 진행한 뒤 변수 선택", "tidyverse를 통한 냉장고 사용량을 시각화 ", "특히 letter-value plot을 통해 구매날짜로부터의 시간대 별 사용량 분포를 효율적으로 제시"],
+};
