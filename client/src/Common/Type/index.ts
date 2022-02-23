@@ -16,3 +16,11 @@ export interface CareerInfoType {
   info: string;
   link?: string;
 }
+
+export interface ProjectInfoType {
+  date: string;
+  info: string;
+  link: string;
+  title: string;
+  organization: string;
+}
