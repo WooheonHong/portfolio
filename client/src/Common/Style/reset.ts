@@ -26,6 +26,8 @@ const GlobalStyle = createGlobalStyle`
   button,svg {
     ${HoverPoitner}
   }
-
+  button{
+    background:none;
+  }
 `;
 export default GlobalStyle;

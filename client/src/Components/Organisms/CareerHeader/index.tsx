@@ -1,0 +1,17 @@
+import { BasicTitleText } from "@Atoms/Text";
+import { Button, Container, Text, TextContainer } from "./style";
+
+const CareerHeader = ({ index, color }: { index: number; color: string }) => {
+  return (
+    <Container>
+      <BasicTitleText color={color}>Career</BasicTitleText>
+      <TextContainer>
+        <Button>⟵</Button>
+        <Text>{` ${index}/3 `}</Text>
+        <Button>⟶</Button>
+      </TextContainer>
+    </Container>
+  );
+};
+
+export default CareerHeader;

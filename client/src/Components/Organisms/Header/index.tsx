@@ -1,11 +1,14 @@
 import MenuIcon from "@Atoms/Menu";
-import { Container, Title, Text } from "./style";
+import { PAGE_INFO } from "@Constant/.";
+import { Container, Title, ContentText } from "./style";
 
-const Header = ({ logoText, infoText }: { logoText: string; infoText: string }) => {
+const Header = ({ logoText, infoText, pageName }: { logoText: string; infoText: string; pageName: string }) => {
+  const { fontColor } = PAGE_INFO[pageName];
+
   return (
     <Container>
-      <Title>{logoText}</Title>
-      <Text>{infoText}</Text>
+      <Title color={fontColor}>{logoText}</Title>
+      <ContentText color={fontColor}>{infoText}</ContentText>
       <MenuIcon />
     </Container>
   );

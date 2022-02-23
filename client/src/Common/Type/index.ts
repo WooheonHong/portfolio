@@ -8,4 +8,5 @@ export interface PAGES_INFO_TYPE {
 
 export interface PAGE_INFO_TYPE {
   fontColor: string;
+  backgroundColor: string;
 }
