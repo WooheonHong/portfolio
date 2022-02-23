@@ -1,16 +1,16 @@
-import { PAGE_INFO } from "@Constant/.";
+import { PAGE_INFO, CAREER_INFOS } from "@Constant/.";
 import CareerContent from "@Organisms/CareerContent";
-import CareerHeader from "@Organisms/CareerHeader";
+import ContenHeader from "@Organisms/ContentHeader";
 import { Container, ContentContainer } from "./style";
 
 const CareerTemplate = ({ pageName }: { pageName: string }) => {
   const { fontColor } = PAGE_INFO[pageName];
   return (
     <Container>
-      <CareerHeader index={1} color={fontColor} />
+      <ContenHeader title="Career" index={0} color={fontColor} />
       <ContentContainer>
-        {new Array(5).fill(1).map(() => (
-          <CareerContent color={fontColor} />
+        {CAREER_INFOS.map(({ date, info, link }) => (
+          <CareerContent color={fontColor} date={date} info={info} link={link} />
         ))}
       </ContentContainer>
     </Container>

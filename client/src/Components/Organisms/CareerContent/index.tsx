@@ -1,11 +1,16 @@
-import { Container, Date, Title, Info } from "./style";
+import { CareerInfoType } from "@Type/.";
+import { Container, Date, Info, Link } from "./style";
 
-const CareerContent = ({ color }: { color: string }) => {
+const CareerContent = ({ color, date, info, link = "" }: { color: string } & CareerInfoType) => {
   return (
     <Container>
-      <Date color={color}>2021.01</Date>
-      <Title color={color}>홍우헌</Title>
-      <Info color={color}>대구광역시 달서구 용산서로 37대구광역시 달서구 용산서로 37대구광역시 달서구 용산서로 37대구광역시 달서구 용산서로 37</Info>
+      <Date color={color}>{date}</Date>
+      {link === "" && <Info color={color}>{info}</Info>}
+      {link !== "" && (
+        <Link href={link}>
+          <Info color={color}>{info}</Info>
+        </Link>
+      )}
     </Container>
   );
 };

@@ -31,4 +31,14 @@ export const Title = styled(Text)<Props>`
 export const Info = styled(Text)<Props>`
   width: 60%;
   color: ${DefaultGreyColor};
+  &:hover {
+    color: white;
+  }
+`;
+
+export const Link = styled.a`
+  width: 60%;
+  &:hover {
+    color: white;
+  }
 `;
