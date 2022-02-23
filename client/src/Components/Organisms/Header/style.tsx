@@ -15,13 +15,13 @@ export const Container = styled.div`
 
 export const Title = styled(Text)<Props>`
   font-weight: 700;
-  font-size: 1.25rem;
+  font-size: 2.5rem;
   margin-left: -5%;
   ${HoverPoitner}
 `;
 
 export const ContentText = styled(Text)<Props>`
-  font-size: 0.25rem;
+  font-size: 1rem;
   margin-left: -10%;
   width: 50%;
 `;
