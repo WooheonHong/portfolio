@@ -2,6 +2,8 @@ export const DefaultBlackColor = "#101010";
 
 export const DefaultWhiteColor = "#FFFFFF";
 
+export const DefaultGreyColor = "#999";
+
 export const DefaultFontFamily = `Inter, "NEXON Lv1 Gothic OTF Light" !important`;
 
 export const AlignCenterAround = `

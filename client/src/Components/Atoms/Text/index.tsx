@@ -17,7 +17,7 @@ export const Title = styled(Text)<Props>`
   font-weight: bold;
 `;
 
-export const SkillTitleText = styled(Text)<Props>`
+export const BasicTitleText = styled(Text)<Props>`
   width: 100%;
   font-size: 1.5rem;
   font-weight: bold;
