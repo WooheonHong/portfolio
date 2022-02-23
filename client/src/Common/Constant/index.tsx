@@ -5,6 +5,10 @@ import r from "@asset/r.jpg";
 import pytorch from "@asset/pytorch.png";
 import sklearn from "@asset/sklearn.png";
 import tidyverse from "@asset/tidyverse.png";
+import book1 from "@asset/book1.png";
+import book2 from "@asset/book2.jpg";
+import book3 from "@asset/book3.jpg";
+import book4 from "@asset/book4.png";
 
 export const LOGO = `HWH`;
 
@@ -98,3 +102,11 @@ export const EXPRIENCE_INFOS = {
   subtitle: ["고객프로파일링 ideation 및 EDA 로직 설계", " 기기의 패턴을 파악"],
   detail: ["PySpark로 파싱과 필터링을 진행한 뒤 변수 선택", "tidyverse를 통한 냉장고 사용량을 시각화 ", "특히 letter-value plot을 통해 구매날짜로부터의 시간대 별 사용량 분포를 효율적으로 제시"],
 };
+
+export const BOOK_LIST = [book1, book2, book3, book4];
+
+export const STUDIED_IFNO = [
+  { title: "머신러닝 , 딥러닝 공부 자료", link: "https://github.com/WooheonHong/ML-DL-Book-Summary" },
+  { title: "Udemy 추천시스템 강의 정리 ", link: "https://github.com/WooheonHong/ML-DL-OnlineCourses" },
+  { title: "데이터 사이언스 공부 자료", link: "https://github.com/WooheonHong/DS-Undergraduate" },
+];
