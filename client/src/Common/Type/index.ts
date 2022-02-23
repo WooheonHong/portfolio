@@ -10,3 +10,9 @@ export interface PAGE_INFO_TYPE {
   fontColor: string;
   backgroundColor: string;
 }
+
+export interface CareerInfoType {
+  date: string;
+  info: string;
+  link?: string;
+}
