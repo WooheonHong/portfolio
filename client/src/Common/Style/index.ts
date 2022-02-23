@@ -4,6 +4,12 @@ export const DefaultWhiteColor = "#FFFFFF";
 
 export const DefaultGreyColor = "#999";
 
+export const DefaultOrangeColor = "#D9730D";
+
+export const DefaultGreenColor = "#0F7B6C";
+
+export const DefaultBlueColor = "#0B6E99";
+
 export const DefaultFontFamily = `Inter, "NEXON Lv1 Gothic OTF Light" !important`;
 
 export const AlignCenterAround = `
@@ -21,3 +27,18 @@ export const HoverPoitner = `
     cursor:pointer;
   }
 `;
+
+export const LgLogoStyle = {
+  width: "15vw",
+  position: "absolute",
+  left: "20vw",
+  top: "33vh",
+};
+
+export const RefrigeratorStyle = {
+  width: "35vw",
+  position: "absolute",
+  left: "20vw",
+  top: "40vh",
+  borderRadius: "40px",
+};

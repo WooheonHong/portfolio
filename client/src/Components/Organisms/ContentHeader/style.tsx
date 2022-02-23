@@ -5,7 +5,7 @@ export const Container = styled.div`
   display: flex;
   ${AlginCenterBetween}
   height: 10%;
-  width: 80%;
+  width: 80vw;
   margin: 1vh auto;
 `;
 export const TextContainer = styled.div`
