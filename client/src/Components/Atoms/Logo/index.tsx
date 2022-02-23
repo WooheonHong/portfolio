@@ -1,8 +1,9 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
-const Logo = ({ src, alt, width, href }: { src: string; alt: string; width: string; href: string }) => {
+// eslint-disable-next-line react/require-default-props
+const Logo = ({ src, alt, width, href, radius = "", backgroundColor = "" }: { src: string; alt: string; width: string; href: string; radius?: string; backgroundColor?: string }) => {
   return (
     <a href={href}>
-      <img width={width} src={src} alt={alt} />
+      <img width={width} src={src} alt={alt} style={{ borderRadius: radius, backgroundColor }} />
     </a>
   );
 };

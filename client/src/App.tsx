@@ -21,7 +21,7 @@ const App = () => {
         <Route path="/AboutMe" element={<AboutMeTemplate pageName="AboutMe" />} />
         <Route path="/SkillSet" element={<SkillSetTemplate pageName="SkillSet" />} />
         <Route path="/Career" element={<CareerTemplate pageName="Career" />} />
-        <Route path="/Project" element={<ProjectTemplate />} />
+        <Route path="/Project" element={<ProjectTemplate pageName="Project" />} />
         <Route path="/Exprience" element={<ExprienceTemplate pageName="Exprience" />} />
         <Route path="/Learned" element={<LearnedTemplate />} />
         <Route path="/Introduction" element={<IntroductionTemplate />} />

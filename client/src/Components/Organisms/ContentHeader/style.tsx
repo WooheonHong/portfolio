@@ -10,6 +10,7 @@ export const Container = styled.div`
 `;
 export const TextContainer = styled.div`
   display: flex;
+  align-items: center;
   justify-content: space-around;
   width: 20%;
 `;
@@ -20,8 +21,8 @@ export const Text = styled.p`
 `;
 
 export const Button = styled.button`
-  font-size: 1rem;
-  width: 5vw;
+  font-size: 2rem;
+  width: 3vw;
   color: ${DefaultGreyColor};
   &:hover {
     cursor: pointer;

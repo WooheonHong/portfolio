@@ -7,7 +7,7 @@ const CareerTemplate = ({ pageName }: { pageName: string }) => {
   const { fontColor } = PAGE_INFO[pageName];
   return (
     <Container>
-      <ContenHeader title="Career" index={0} color={fontColor} />
+      <ContenHeader title="Career" index={-1} color={fontColor} />
       <ContentContainer>
         {CAREER_INFOS.map(({ date, info, link }) => (
           <CareerContent color={fontColor} date={date} info={info} link={link} />
