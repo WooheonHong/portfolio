@@ -11,8 +11,9 @@ import SkillSetTemplate from "@Templates/SkillSet";
 import MainPage from "./Components/Page";
 
 const App = () => {
-  const { pathname } = useLocation();
-  const pageName = pathname.replace("/", "");
+  const location = useLocation();
+  console.log(location);
+  const pageName = "AboutMe";
 
   return (
     <MainPage pageName={pageName}>
@@ -23,7 +24,7 @@ const App = () => {
         <Route path="/Career" element={<CareerTemplate pageName="Career" />} />
         <Route path="/Project" element={<ProjectTemplate pageName="Project" />} />
         <Route path="/Exprience" element={<ExprienceTemplate pageName="Exprience" />} />
-        <Route path="/Learned" element={<LearnedTemplate />} />
+        <Route path="/Learned" element={<LearnedTemplate pageName="Learned" />} />
         <Route path="/Introduction" element={<IntroductionTemplate />} />
         <Route path="*" element={<Navigate replace to="/AboutMe" />} />
       </Routes>

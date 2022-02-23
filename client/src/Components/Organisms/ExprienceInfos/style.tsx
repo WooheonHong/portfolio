@@ -10,6 +10,7 @@ export const Container = styled.div`
   flex-direction: column;
   width: 100%;
   height: 90%;
+  transition: 1s;
 `;
 
 export const TitleContainer = styled.div`
