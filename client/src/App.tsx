@@ -16,7 +16,7 @@ const App = () => {
       <Header logoText={LOGO} infoText={`${PHONE_NUMBER}/${EMAIL}`} />
       <Routes>
         <Route path="/AboutMe" element={<AboutMeTemplate pageName="AboutMe" />} />
-        <Route path="/SkillSet" element={<SkillSetTemplate index={0} />} />
+        <Route path="/SkillSet" element={<SkillSetTemplate pageName="SkillSet" />} />
         <Route path="/Career" element={<CareerTemplate index={0} />} />
         <Route path="/Project" element={<ProjectTemplate index={0} />} />
         <Route path="/Exprience" element={<ExprienceTemplate index={0} />} />
