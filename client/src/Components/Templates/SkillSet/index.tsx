@@ -1,5 +1,5 @@
 import Icon from "@Atoms/Icon";
-import { SkillTitleText, Title } from "@Atoms/Text";
+import { BasicTitleText, Title } from "@Atoms/Text";
 import { HelloMessage, PAGE_INFO, SkillSetIcons, SkillSetInfo } from "@Constant/.";
 import TitleText from "@Organisms/TitleText";
 import { Container, SkillSetContainer, SkillIconContainer } from "./style";
@@ -15,7 +15,7 @@ const SkillSetTemplate = ({ pageName }: { pageName: string }) => {
         ))}
       </SkillSetContainer>
       <SkillIconContainer>
-        <SkillTitleText color={fontColor}>프로그래밍 언어</SkillTitleText>
+        <BasicTitleText color={fontColor}>프로그래밍 언어</BasicTitleText>
         {SkillSetIcons.map((src: string) => (
           <Icon src={src} alt="1" />
         ))}

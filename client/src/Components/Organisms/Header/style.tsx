@@ -1,6 +1,10 @@
 import { AlignCenterAround, HoverPoitner } from "@Style/.";
 import styled from "styled-components";
+import { Text } from "@Atoms/Text";
 
+interface Props {
+  color: string;
+}
 export const Container = styled.div`
   display: flex;
   align-items: center;
@@ -9,14 +13,14 @@ export const Container = styled.div`
   ${AlignCenterAround}
 `;
 
-export const Title = styled.p`
+export const Title = styled(Text)<Props>`
   font-weight: 700;
   font-size: 1.25rem;
   margin-left: -5%;
   ${HoverPoitner}
 `;
 
-export const Text = styled.p`
+export const ContentText = styled(Text)<Props>`
   font-size: 0.25rem;
   margin-left: -10%;
   width: 50%;
