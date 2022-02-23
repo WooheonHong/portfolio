@@ -28,24 +28,31 @@ export const SkillSetInfo = [
 export const PAGE_INFO: PAGES_INFO_TYPE = {
   AboutMe: {
     fontColor: DefaultBlackColor,
+    backgroundColor: DefaultWhiteColor,
   },
   Career: {
     fontColor: DefaultWhiteColor,
+    backgroundColor: DefaultBlackColor,
   },
   Experience: {
     fontColor: DefaultBlackColor,
+    backgroundColor: DefaultWhiteColor,
   },
   Introduction: {
     fontColor: DefaultWhiteColor,
+    backgroundColor: DefaultBlackColor,
   },
   Learned: {
     fontColor: DefaultBlackColor,
+    backgroundColor: DefaultWhiteColor,
   },
   Project: {
     fontColor: DefaultWhiteColor,
+    backgroundColor: DefaultBlackColor,
   },
   SkillSet: {
     fontColor: DefaultBlackColor,
+    backgroundColor: DefaultWhiteColor,
   },
 };
 

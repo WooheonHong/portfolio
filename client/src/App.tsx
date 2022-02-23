@@ -13,9 +13,9 @@ import MainPage from "./Components/Page";
 const App = () => {
   const { pathname } = useLocation();
   const pageName = pathname.replace("/", "");
-  console.log(pageName);
+
   return (
-    <MainPage>
+    <MainPage pageName={pageName}>
       <Header logoText={LOGO} infoText={`${PHONE_NUMBER}/${EMAIL}`} pageName={pageName} />
       <Routes>
         <Route path="/AboutMe" element={<AboutMeTemplate pageName="AboutMe" />} />
