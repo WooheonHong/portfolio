@@ -4,7 +4,6 @@ import { Arrow, Container, Title, TitleContainer, TextContainer, Detail, Date, S
 
 const ExprienceInfos = ({ onClick }: { onClick: () => void }) => {
   const { title, date, organization, subtitle, detail } = EXPRIENCE_INFOS;
-  console.log(organization, subtitle, detail);
 
   return (
     <Container>

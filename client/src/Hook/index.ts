@@ -24,15 +24,14 @@ export const useScroll = ({ beforePage, afterPage }: { beforePage?: string; afte
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   function handleScroll(e: any) {
-    console.log(y, window.scrollY);
     if (y > window.scrollY) {
-      setY(window.scrollY);
       if (!beforePage) return;
       navigator(`/${beforePage}`);
-    } else if (y + 10 < window.scrollY) {
-      setY(window.scrollY);
+    } else if (y < window.scrollY) {
+      if (!afterPage) return;
       navigator(`/${afterPage}`);
     }
+    setY(window.scrollY);
   }
   useEffect(() => {
     setY(window.scrollY);

@@ -11,26 +11,30 @@ import SkillSetTemplate from "@Templates/SkillSet";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import MainPage from "./Components/Page";
 import "./App.css";
+import ScrollToTop from "./Components/ScrollToTop";
 
 const App = () => {
   const { pathname } = useLocation();
 
   const pageName = pathname.replace("/", "");
+  // eslint-disable-next-line no-underscore-dangle
+  const _pageName = pageName || "AboutMe";
 
   return (
     <TransitionGroup className="transition-group">
-      <CSSTransition key={pathname} className="pageSlider" timeout={500}>
-        <MainPage pageName={pageName}>
-          <Header logoText={LOGO} infoText={`${PHONE_NUMBER}/${EMAIL}`} pageName={pageName} />
+      <CSSTransition key={pathname} className="pageSlider" timeout={1000}>
+        <MainPage pageName={_pageName}>
+          <Header logoText={LOGO} infoText={`${PHONE_NUMBER}/${EMAIL}`} pageName={_pageName} />
+          <ScrollToTop />
           <Routes>
-            <Route path="/AboutMe" element={<AboutMeTemplate pageName={pageName} />} />
-            <Route path="/SkillSet" element={<SkillSetTemplate pageName={pageName} />} />
-            <Route path="/Career" element={<CareerTemplate pageName={pageName} />} />
-            <Route path="/Project" element={<ProjectTemplate pageName={pageName} />} />
-            <Route path="/Exprience" element={<ExprienceTemplate pageName={pageName} />} />
-            <Route path="/Learned" element={<LearnedTemplate pageName={pageName} />} />
+            <Route path="/AboutMe" element={<AboutMeTemplate pageName={_pageName} />} />
+            <Route path="/SkillSet" element={<SkillSetTemplate pageName={_pageName} />} />
+            <Route path="/Career" element={<CareerTemplate pageName={_pageName} />} />
+            <Route path="/Project" element={<ProjectTemplate pageName={_pageName} />} />
+            <Route path="/Exprience" element={<ExprienceTemplate pageName={_pageName} />} />
+            <Route path="/Learned" element={<LearnedTemplate pageName={_pageName} />} />
             <Route path="/Introduction" element={<IntroductionTemplate />} />
-            <Route path="*" element={<Navigate replace to="/" />} />
+            <Route path="*" element={<Navigate replace to="/AboutMe" />} />
           </Routes>
         </MainPage>
       </CSSTransition>

@@ -1,14 +1,13 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router";
 
-const ScrollToTop = ({ children }: { children: React.ReactNode }) => {
-  const location = useLocation();
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [location]);
+    window.scrollTo(0, 30);
+  }, [pathname]);
 
-  // eslint-disable-next-line react/jsx-no-useless-fragment
-  return <>{children}</>;
+  return null;
 };
 
 export default ScrollToTop;
