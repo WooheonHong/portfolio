@@ -1,11 +1,13 @@
 import Icon from "@Atoms/Icon";
 import { BasicTitleText, Title } from "@Atoms/Text";
 import { HelloMessage, PAGE_INFO, SkillSetIcons, SkillSetInfo } from "@Constant/.";
+import { useScroll } from "@Hook/.";
 import TitleText from "@Organisms/TitleText";
 import { Container, SkillSetContainer, SkillIconContainer } from "./style";
 
 const SkillSetTemplate = ({ pageName }: { pageName: string }) => {
   const { fontColor } = PAGE_INFO[pageName];
+  useScroll({ beforePage: "AboutMe", afterPage: "Career" });
   return (
     <Container>
       <Title color={fontColor}>{HelloMessage}</Title>

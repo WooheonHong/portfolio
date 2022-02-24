@@ -45,6 +45,7 @@
         ]
     },
     "devDependencies": {
+        "@types/react-transition-group": "^4.4.4",
         "@types/styled-components": "^5.1.23",
         "@typescript-eslint/eslint-plugin": "^5.12.0",
         "@typescript-eslint/parser": "^5.12.0",

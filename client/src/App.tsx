@@ -8,27 +8,33 @@ import IntroductionTemplate from "@Templates/Introduction";
 import LearnedTemplate from "@Templates/Learned";
 import ProjectTemplate from "@Templates/Project";
 import SkillSetTemplate from "@Templates/SkillSet";
+import { TransitionGroup, CSSTransition } from "react-transition-group";
 import MainPage from "./Components/Page";
+import "./App.css";
 
 const App = () => {
-  const location = useLocation();
-  console.log(location);
-  const pageName = "AboutMe";
+  const { pathname } = useLocation();
+
+  const pageName = pathname.replace("/", "");
 
   return (
-    <MainPage pageName={pageName}>
-      <Header logoText={LOGO} infoText={`${PHONE_NUMBER}/${EMAIL}`} pageName={pageName} />
-      <Routes>
-        <Route path="/AboutMe" element={<AboutMeTemplate pageName="AboutMe" />} />
-        <Route path="/SkillSet" element={<SkillSetTemplate pageName="SkillSet" />} />
-        <Route path="/Career" element={<CareerTemplate pageName="Career" />} />
-        <Route path="/Project" element={<ProjectTemplate pageName="Project" />} />
-        <Route path="/Exprience" element={<ExprienceTemplate pageName="Exprience" />} />
-        <Route path="/Learned" element={<LearnedTemplate pageName="Learned" />} />
-        <Route path="/Introduction" element={<IntroductionTemplate />} />
-        <Route path="*" element={<Navigate replace to="/AboutMe" />} />
-      </Routes>
-    </MainPage>
+    <TransitionGroup className="transition-group">
+      <CSSTransition key={pathname} className="pageSlider" timeout={500}>
+        <MainPage pageName={pageName}>
+          <Header logoText={LOGO} infoText={`${PHONE_NUMBER}/${EMAIL}`} pageName={pageName} />
+          <Routes>
+            <Route path="/AboutMe" element={<AboutMeTemplate pageName={pageName} />} />
+            <Route path="/SkillSet" element={<SkillSetTemplate pageName={pageName} />} />
+            <Route path="/Career" element={<CareerTemplate pageName={pageName} />} />
+            <Route path="/Project" element={<ProjectTemplate pageName={pageName} />} />
+            <Route path="/Exprience" element={<ExprienceTemplate pageName={pageName} />} />
+            <Route path="/Learned" element={<LearnedTemplate pageName={pageName} />} />
+            <Route path="/Introduction" element={<IntroductionTemplate />} />
+            <Route path="*" element={<Navigate replace to="/" />} />
+          </Routes>
+        </MainPage>
+      </CSSTransition>
+    </TransitionGroup>
   );
 };
 

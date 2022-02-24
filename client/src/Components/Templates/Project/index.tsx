@@ -1,4 +1,4 @@
-import { IdxReducer } from "@Hook/.";
+import { IdxReducer, useScroll } from "@Hook/.";
 import ContentHeader from "@Organisms/ContentHeader";
 import { ContentContainer } from "@Templates/Career/style";
 import { useReducer } from "react";
@@ -9,6 +9,7 @@ import { Container } from "./style";
 const ProjectTemplate = ({ pageName }: { pageName: string }) => {
   const [index, setIndex] = useReducer(IdxReducer, 0);
   const { fontColor } = PAGE_INFO[pageName];
+  useScroll({ beforePage: "Career", afterPage: "Learned" });
 
   return (
     <Container>
