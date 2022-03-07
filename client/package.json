@@ -1,5 +1,6 @@
 {
     "name": "client",
+    "homepage": "https://noelsky-code.github.io/portfolio/",
     "version": "0.1.0",
     "private": true,
     "dependencies": {
@@ -24,7 +25,9 @@
         "start": "react-app-rewired start",
         "build": "react-app-rewired build",
         "test": "react-app-rewired test",
-        "eject": "react-app-rewired eject"
+        "eject": "react-app-rewired eject",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build"
     },
     "eslintConfig": {
         "extends": [
