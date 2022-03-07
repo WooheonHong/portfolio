@@ -12,6 +12,7 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     text-decoration: none;
     color: #000000;
+    scroll-behavior: smooth;
   }
   *::-webkit-scrollbar {
     display: none; /* Chrome, Safari, Opera*/

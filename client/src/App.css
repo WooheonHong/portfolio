@@ -1,26 +1,22 @@
-.pageSlider-enter {
+.enter {
     position: absolute;
     opacity: 0.01;
-    top: 100%;
+    top: 90%;
+    overflow: hidden;
 }
 
-.pageSlider-enter-active {
+.enter-active {
     position: absolute;
     opacity: 1;
     top: 0%;
-    transition: all 1000ms ease-in;
-    transform: translateY(1000px);
+    transition: all 700ms ease-in;
 }
 
-.pageSlider-exit {
-    position: absolute;
+.exit {
     opacity: 1;
-    top: 0%;
 }
 
-.pageSlider-exit-active {
-    position: absolute;
-    opacity: 0;
-    top: 100%;
-    transition: opacity 1000ms, transform 1000ms;
+.exit-active {
+    opacity: 0.01;
+    transition: all 700ms ease-in;
 }
