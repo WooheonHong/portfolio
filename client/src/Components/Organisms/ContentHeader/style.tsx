@@ -7,6 +7,7 @@ export const Container = styled.div`
   height: 10%;
   width: 80vw;
   margin: 1vh auto;
+  min-width: 820px;
 `;
 export const TextContainer = styled.div`
   display: flex;

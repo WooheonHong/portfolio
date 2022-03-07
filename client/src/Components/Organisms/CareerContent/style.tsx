@@ -8,7 +8,7 @@ interface Props {
 export const Container = styled.div`
   display: flex;
   ${AlginCenterBetween}
-  height: 20vh;
+  height: 13vh;
   width: 95%;
   &::after {
     content: "";
@@ -21,11 +21,11 @@ export const Container = styled.div`
 `;
 
 export const Date = styled(Text)<Props>`
-  width: 20%;
+  width: 40%;
 `;
 
 export const Title = styled(Text)<Props>`
-  width: 20%;
+  width: 40%;
 `;
 
 export const Info = styled(Text)<Props>`

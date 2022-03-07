@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -38,9 +39,11 @@ export const useScroll = ({ beforePage, afterPage }: { beforePage?: string; afte
     e.preventDefault();
   }
   useEffect(() => {
-    setY(window.scrollY);
-    document.addEventListener("scroll", stopScroll);
-    setTimeout(() => document.removeEventListener("scroll", stopScroll), 1000);
+    window.addEventListener("scroll", stopScroll);
+    setTimeout(() => window.removeEventListener("scroll", stopScroll), 1000);
+    return () => {
+      window.removeEventListener("scroll", stopScroll);
+    };
   }, []);
 
   useEffect(() => {

@@ -27,5 +27,6 @@ export const SkillText = styled(Text)<Props>`
   width: 100%;
   font-size: 0.8rem;
   line-height: 1.5;
+  margin-top: 2vh;
   color: #8a8a8a;
 `;

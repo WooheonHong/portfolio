@@ -5,6 +5,7 @@ export const Container = styled.div`
   flex-direction: column;
   width: 100vw;
   height: 90vh;
+  min-width: 820px;
 `;
 
 export const ContentContainer = styled.div`
@@ -13,4 +14,5 @@ export const ContentContainer = styled.div`
   width: 80%;
   height: 90%;
   margin: auto;
+  min-width: 820px;
 `;

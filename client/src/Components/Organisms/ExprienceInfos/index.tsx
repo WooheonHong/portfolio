@@ -1,8 +1,8 @@
 import { EXPRIENCE_INFOS } from "@Constant/.";
 import { DefaultOrangeColor, DefaultGreenColor } from "@Style/.";
-import { Arrow, Container, Title, TitleContainer, TextContainer, Detail, Date, SubTitle } from "./style";
+import { Container, Title, TitleContainer, TextContainer, Detail, Date, SubTitle } from "./style";
 
-const ExprienceInfos = ({ onClick }: { onClick: () => void }) => {
+const ExprienceInfos = () => {
   const { title, date, organization, subtitle, detail } = EXPRIENCE_INFOS;
 
   return (
@@ -12,7 +12,6 @@ const ExprienceInfos = ({ onClick }: { onClick: () => void }) => {
         <Date>{date}</Date>
       </TitleContainer>
       <Title color={DefaultGreenColor}>{title}</Title>
-      <Arrow onClick={onClick}>{"<"}</Arrow>
       <TextContainer>
         <SubTitle>{subtitle[0]}</SubTitle>
         <SubTitle>{subtitle[1]}</SubTitle>

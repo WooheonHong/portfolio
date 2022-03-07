@@ -6,4 +6,5 @@ export const Container = styled.div`
   margin: 5vh 0 0 25vw;
   width: 65vw;
   height: 80vh;
+  min-width: 820px;
 `;

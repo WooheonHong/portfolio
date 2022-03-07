@@ -3,12 +3,12 @@ import { GithubLink, IntroductionMessage, LinkedInLink, PAGE_INFO } from "@Const
 import githubLogo from "@asset/github.png";
 import linkedInLogo from "@asset/linkedIn.png";
 import Logo from "@Atoms/Logo";
-import { useScroll } from "@Hook/.";
+// import { useScroll } from "@Hook/.";
 import { Container, TextContainer, LogoContainer } from "./style";
 
 const AboutMeTemplate = ({ pageName }: { pageName: string }) => {
   const { fontColor } = PAGE_INFO[pageName];
-  useScroll({ afterPage: "SkillSet" });
+  // useScroll({ afterPage: "SkillSet" });
   return (
     <Container>
       <TextContainer>

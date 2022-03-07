@@ -51,8 +51,8 @@ export const PAGE_INFO: PAGES_INFO_TYPE = {
     backgroundColor: DefaultWhiteColor,
   },
   Project: {
-    fontColor: DefaultWhiteColor,
-    backgroundColor: DefaultBlackColor,
+    fontColor: DefaultBlackColor,
+    backgroundColor: DefaultWhiteColor,
   },
   SkillSet: {
     fontColor: DefaultBlackColor,

@@ -11,6 +11,7 @@ export const Container = styled.div`
   width: 100%;
   height: 90%;
   transition: 1s;
+  min-width: 820px;
 `;
 
 export const TitleContainer = styled.div`

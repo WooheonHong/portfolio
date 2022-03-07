@@ -6,7 +6,7 @@ import { Container, ContentContainer } from "./style";
 
 const CareerTemplate = ({ pageName }: { pageName: string }) => {
   const { fontColor } = PAGE_INFO[pageName];
-  useScroll({ beforePage: "SkillSet", afterPage: "Project" });
+  useScroll({ beforePage: "SkillSet", afterPage: "Project/1" });
   return (
     <Container>
       <ContenHeader title="Career" index={-1} color={fontColor} />

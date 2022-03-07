@@ -29,10 +29,9 @@ export const HoverPoitner = `
 `;
 
 export const LgLogoStyle = {
-  width: "15vw",
-  position: "absolute",
-  left: "20vw",
-  top: "33vh",
+  width: "12vw",
+  position: "relative",
+  top: "2vh",
 };
 
 export const RefrigeratorStyle = {

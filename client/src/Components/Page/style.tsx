@@ -4,6 +4,7 @@ interface Props {
   backgroundColor: string;
 }
 export const Container = styled.div<Props>`
+  min-width: 820px;
   width: 100vw;
   margin: 5vh auto;
   height: 110vh;
