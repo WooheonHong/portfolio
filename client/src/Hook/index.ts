@@ -24,17 +24,23 @@ export const useScroll = ({ beforePage, afterPage }: { beforePage?: string; afte
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   function handleScroll(e: any) {
-    if (y > window.scrollY) {
+    if (window.scrollY < 10) {
       if (!beforePage) return;
       navigator(`/${beforePage}`);
-    } else if (y < window.scrollY) {
+    } else if (window.scrollY > 120) {
       if (!afterPage) return;
       navigator(`/${afterPage}`);
     }
-    setY(window.scrollY);
+  }
+  function stopScroll(e: Event) {
+    window.scrollTo(0, 30);
+    e.stopPropagation();
+    e.preventDefault();
   }
   useEffect(() => {
     setY(window.scrollY);
+    document.addEventListener("scroll", stopScroll);
+    setTimeout(() => document.removeEventListener("scroll", stopScroll), 1000);
   }, []);
 
   useEffect(() => {
