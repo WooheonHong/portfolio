@@ -7,7 +7,11 @@ import { Container, TitleContianer, Date, Info, Organization } from "./style";
 
 const ProjectContent = () => {
   const { projectId: index } = useParams();
+  const temp = useParams();
+  console.log(temp);
+  console.log(index);
   const { title, date, organization, info, link } = PROJECT_INFOS[Number(index)];
+  console.log(title, date, organization);
   return (
     <Container>
       <TitleContianer>

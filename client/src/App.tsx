@@ -20,6 +20,8 @@ const App = () => {
 
   // const pageName = pathname.replace("/portfolio/", "").replaceAll("/", "");
   const pageName = pathname.replace("/portfolio/", "").replace("/", "");
+
+  const param = pageName.split("/")[1] ? `/${pageName.split("/")[1]}` : "";
   // eslint-disable-next-line no-underscore-dangle
   const _pageName = convertPageName(pageName);
   // console.log(_pageName);
@@ -31,12 +33,12 @@ const App = () => {
         <MainPage pageName={_pageName}>
           <Header logoText={LOGO} infoText={`${PHONE_NUMBER}/${EMAIL}`} pageName={_pageName} />
           <ScrollToTop />
-          <Routes location={`${basicPath}/${_pageName}`}>
+          <Routes location={`${basicPath}/${_pageName}${param}`}>
             <Route path={`${basicPath}/AboutMe`} element={<AboutMeTemplate pageName={_pageName} />} />
             <Route path={`${basicPath}/SkillSet`} element={<SkillSetTemplate pageName={_pageName} />} />
             <Route path={`${basicPath}/Career`} element={<CareerTemplate pageName={_pageName} />} />
             <Route path={`${basicPath}/Project`} element={<ProjectTemplate pageName={_pageName} />}>
-              <Route path=":proejctId" element={<ProjectContent />} />
+              <Route path=":projectId" element={<ProjectContent />} />
             </Route>
             <Route path={`${basicPath}/Exprience`} element={<ExprienceTemplate pageName={_pageName} />} />
             <Route path={`${basicPath}/Learned`} element={<LearnedTemplate pageName={_pageName} />} />
