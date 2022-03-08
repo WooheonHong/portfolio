@@ -3,7 +3,7 @@ import ContentHeader from "@Organisms/ContentHeader";
 import { ContentContainer } from "@Templates/Career/style";
 import { useReducer } from "react";
 import { PAGE_INFO } from "@Constant/.";
-import ProjectContent from "@Organisms/ProjectContnet";
+import { Outlet } from "react-router-dom";
 import { Container } from "./style";
 
 const ProjectTemplate = ({ pageName }: { pageName: string }) => {
@@ -15,7 +15,7 @@ const ProjectTemplate = ({ pageName }: { pageName: string }) => {
     <Container>
       <ContentContainer>
         <ContentHeader color={fontColor} title="Project" index={index} setIndex={setIndex} />
-        <ProjectContent index={index} />
+        <Outlet />
       </ContentContainer>
     </Container>
   );

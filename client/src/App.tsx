@@ -9,6 +9,8 @@ import LearnedTemplate from "@Templates/Learned";
 import ProjectTemplate from "@Templates/Project";
 import SkillSetTemplate from "@Templates/SkillSet";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
+import ProjectContent from "@Organisms/ProjectContnet";
+import { convertPageName } from "@Util/.";
 import MainPage from "./Components/Page";
 import "./App.css";
 import ScrollToTop from "./Components/ScrollToTop";
@@ -16,9 +18,11 @@ import ScrollToTop from "./Components/ScrollToTop";
 const App = () => {
   const { pathname } = useLocation();
 
-  const pageName = pathname.replace("/portfolio/", "").replaceAll("/", "");
+  // const pageName = pathname.replace("/portfolio/", "").replaceAll("/", "");
+  const pageName = pathname.replace("/portfolio/", "").replace("/", "");
   // eslint-disable-next-line no-underscore-dangle
-  const _pageName = pageName || "AboutMe";
+  const _pageName = convertPageName(pageName);
+  // console.log(_pageName);
   const basicPath = "";
 
   return (
@@ -31,7 +35,9 @@ const App = () => {
             <Route path={`${basicPath}/AboutMe`} element={<AboutMeTemplate pageName={_pageName} />} />
             <Route path={`${basicPath}/SkillSet`} element={<SkillSetTemplate pageName={_pageName} />} />
             <Route path={`${basicPath}/Career`} element={<CareerTemplate pageName={_pageName} />} />
-            <Route path={`${basicPath}/Project`} element={<ProjectTemplate pageName={_pageName} />} />
+            <Route path={`${basicPath}/Project`} element={<ProjectTemplate pageName={_pageName} />}>
+              <Route path=":proejctId" element={<ProjectContent />} />
+            </Route>
             <Route path={`${basicPath}/Exprience`} element={<ExprienceTemplate pageName={_pageName} />} />
             <Route path={`${basicPath}/Learned`} element={<LearnedTemplate pageName={_pageName} />} />
             <Route path={`${basicPath}/Introduction`} element={<IntroductionTemplate />} />
