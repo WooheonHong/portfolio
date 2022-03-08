@@ -27,7 +27,7 @@ const App = () => {
         <MainPage pageName={_pageName}>
           <Header logoText={LOGO} infoText={`${PHONE_NUMBER}/${EMAIL}`} pageName={_pageName} />
           <ScrollToTop />
-          <Routes location={pathname}>
+          <Routes location={`${basicPath}/${_pageName}`}>
             <Route path={`${basicPath}/AboutMe`} element={<AboutMeTemplate pageName={_pageName} />} />
             <Route path={`${basicPath}/SkillSet`} element={<SkillSetTemplate pageName={_pageName} />} />
             <Route path={`${basicPath}/Career`} element={<CareerTemplate pageName={_pageName} />} />
