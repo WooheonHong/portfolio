@@ -18,8 +18,7 @@ const App = () => {
   const { pathname } = useLocation();
 
   // const pageName = pathname.replace("/portfolio/", "").replaceAll("/", "");
-  const pageName = pathname.replace("/portfolio/", "").replace("/", "");
-
+  const pageName = pathname.replace("/portfolio", "").replace("/", "");
   const param = pageName.split("/")[1] ? `/${pageName.split("/")[1]}` : "";
   // eslint-disable-next-line no-underscore-dangle
   const _pageName = convertPageName(pageName);
@@ -40,7 +39,7 @@ const App = () => {
             </Route>
             <Route path={`${basicPath}/Learned`} element={<LearnedTemplate pageName={_pageName} />} />
             <Route path={`${basicPath}/Introduction`} element={<IntroductionTemplate />} />
-            <Route path="*" element={<Navigate replace to={`${basicPath}/AboutMe`} />} />
+            <Route path={`${basicPath}/*`} element={<Navigate replace to={`${basicPath}/AboutMe`} />} />
           </Routes>
         </MainPage>
       </CSSTransition>

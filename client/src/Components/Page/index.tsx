@@ -14,7 +14,7 @@ const MainPage = ({ children, pageName = "AboutMe" }: { children: React.ReactNod
   return (
     <Container backgroundColor={backgroundColor}>
       {children}
-      <NavigatorContainer>{new Array(PageSize).fill(0).map((_, idx) => (idx + 1 === nowPage ? <RedCircle fill="red" width="30px" height="30px" /> : <RedCircle fill="none" width="30px" height="30px" />))}</NavigatorContainer>
+      <NavigatorContainer>{new Array(PageSize).fill(0).map((_, idx) => (idx === nowPage ? <RedCircle fill="red" width="30px" height="30px" /> : <RedCircle fill="none" width="30px" height="30px" />))}</NavigatorContainer>
     </Container>
   );
 };
