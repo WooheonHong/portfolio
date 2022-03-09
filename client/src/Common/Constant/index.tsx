@@ -34,27 +34,19 @@ export const PAGE_INFO: PAGES_INFO_TYPE = {
     fontColor: DefaultBlackColor,
     backgroundColor: DefaultWhiteColor,
   },
+  SkillSet: {
+    fontColor: DefaultBlackColor,
+    backgroundColor: DefaultWhiteColor,
+  },
   Career: {
     fontColor: DefaultWhiteColor,
     backgroundColor: DefaultBlackColor,
-  },
-  Exprience: {
-    fontColor: DefaultBlackColor,
-    backgroundColor: DefaultWhiteColor,
-  },
-  Introduction: {
-    fontColor: DefaultWhiteColor,
-    backgroundColor: DefaultBlackColor,
-  },
-  Learned: {
-    fontColor: DefaultBlackColor,
-    backgroundColor: DefaultWhiteColor,
   },
   Project: {
     fontColor: DefaultBlackColor,
     backgroundColor: DefaultWhiteColor,
   },
-  SkillSet: {
+  Learned: {
     fontColor: DefaultBlackColor,
     backgroundColor: DefaultWhiteColor,
   },

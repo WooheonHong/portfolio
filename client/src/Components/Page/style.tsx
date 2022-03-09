@@ -11,3 +11,14 @@ export const Container = styled.div<Props>`
   background-color: ${({ backgroundColor }) => backgroundColor};
   color: #ffffff;
 `;
+
+export const NavigatorContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 88vw;
+  top: 45vh;
+  height: 17vh;
+  width: 5vw;
+  transition: 1s;
+`;

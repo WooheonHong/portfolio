@@ -13,3 +13,7 @@ export const getProjectBeforeAfter = (index: number) => {
 
   return [before, after];
 };
+
+export const getPageOrder = (pageName: string) => Object.keys(PAGE_INFO).indexOf(pageName);
+
+export const PageSize = Object.keys(PAGE_INFO).length;
