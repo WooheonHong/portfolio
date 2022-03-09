@@ -1,20 +1,22 @@
-import { IdxReducer, useScroll } from "@Hook/.";
+import { useScroll } from "@Hook/.";
 import ContentHeader from "@Organisms/ContentHeader";
 import { ContentContainer } from "@Templates/Career/style";
-import { useReducer } from "react";
 import { PAGE_INFO } from "@Constant/.";
-import { Outlet } from "react-router-dom";
+import { Outlet, useParams } from "react-router-dom";
+import { getProjectBeforeAfter } from "@Util/.";
 import { Container } from "./style";
 
 const ProjectTemplate = ({ pageName }: { pageName: string }) => {
-  const [index, setIndex] = useReducer(IdxReducer, 0);
   const { fontColor } = PAGE_INFO[pageName];
-  useScroll({ beforePage: "Career", afterPage: "Learned" });
+  const { projectId: index } = useParams();
+  const [beforePage, afterPage] = getProjectBeforeAfter(Number(index));
+
+  useScroll({ beforePage, afterPage });
 
   return (
     <Container>
       <ContentContainer>
-        <ContentHeader color={fontColor} title="Project" index={index} setIndex={setIndex} />
+        <ContentHeader color={fontColor} title="Project & Exprience" index={-1} />
         <Outlet />
       </ContentContainer>
     </Container>

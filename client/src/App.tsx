@@ -3,7 +3,6 @@ import AboutMeTemplate from "@Templates/AboutMe";
 import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { LOGO, PHONE_NUMBER, EMAIL } from "@Constant/.";
 import CareerTemplate from "@Templates/Career";
-import ExprienceTemplate from "@Templates/Exprience";
 import IntroductionTemplate from "@Templates/Introduction";
 import LearnedTemplate from "@Templates/Learned";
 import ProjectTemplate from "@Templates/Project";
@@ -24,7 +23,6 @@ const App = () => {
   const param = pageName.split("/")[1] ? `/${pageName.split("/")[1]}` : "";
   // eslint-disable-next-line no-underscore-dangle
   const _pageName = convertPageName(pageName);
-  // console.log(_pageName);
   const basicPath = "";
 
   return (
@@ -40,7 +38,6 @@ const App = () => {
             <Route path={`${basicPath}/Project`} element={<ProjectTemplate pageName={_pageName} />}>
               <Route path=":projectId" element={<ProjectContent />} />
             </Route>
-            <Route path={`${basicPath}/Exprience`} element={<ExprienceTemplate pageName={_pageName} />} />
             <Route path={`${basicPath}/Learned`} element={<LearnedTemplate pageName={_pageName} />} />
             <Route path={`${basicPath}/Introduction`} element={<IntroductionTemplate />} />
             <Route path="*" element={<Navigate replace to={`${basicPath}/AboutMe`} />} />

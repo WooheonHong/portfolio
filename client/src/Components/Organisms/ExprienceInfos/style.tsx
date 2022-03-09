@@ -61,9 +61,18 @@ export const SubTitle = styled.p`
 `;
 
 export const Detail = styled.p`
-  width: 80%;
+  width: 70%;
   font-size: 0.8125rem;
   margin-bottom: 1vh;
   margin-left: 3%;
+  line-height: 25px;
   color: ${DefaultBlackColor};
+`;
+
+export const LogoContainer = styled.div`
+  position: absolute;
+  min-width: 50px;
+  width: 5vw;
+  left: 65vw;
+  top: 70vh;
 `;

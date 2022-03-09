@@ -6,7 +6,7 @@ import { BooksContainer, Container, ContentContainer, LinkContainer, Link } from
 
 const LearnedTemplate = ({ pageName }: { pageName: string }) => {
   const { fontColor } = PAGE_INFO[pageName];
-  useScroll({ beforePage: "Exprience" });
+  useScroll({ beforePage: "Project/4" });
   return (
     <Container>
       <ContentHeader color={fontColor} title="Studied" index={-1} />
