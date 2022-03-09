@@ -15,7 +15,7 @@ export const Container = styled.div`
     display: block;
     position: absolute;
     border-bottom: 1px solid ${DefaultGreyColor};
-    width: 80%;
+    width: 60vw;
     margin-top: 14vh;
   }
 `;

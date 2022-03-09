@@ -5,7 +5,7 @@ export const Container = styled.div`
   display: flex;
   ${AlginCenterBetween}
   height: 10%;
-  width: 80vw;
+  width: 80%;
   margin: 1vh auto;
   min-width: 820px;
 `;

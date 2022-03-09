@@ -8,10 +8,11 @@ interface Props {
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 60vw;
   height: 90%;
   transition: 1s;
   min-width: 820px;
+  margin: auto;
 `;
 
 export const TitleContainer = styled.div`
@@ -73,6 +74,6 @@ export const LogoContainer = styled.div`
   position: absolute;
   min-width: 50px;
   width: 5vw;
-  left: 65vw;
+  left: 60vw;
   top: 70vh;
 `;
